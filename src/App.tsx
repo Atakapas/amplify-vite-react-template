@@ -14,7 +14,7 @@ function App() {
   }, []);
 
   function createTodo() {
-    client.models.Todo.create({ content: window.prompt("Todo content") });
+    client.models.Todo.create({ content: window.prompt("Don's To Do List") });
   }
   
   function deleteTodo(id: string) {
@@ -22,8 +22,8 @@ function App() {
   }
   return (
     <main>
-      <h1>My todos</h1>
-      <button onClick={createTodo}>+ new</button>
+      <h1>Don's To Dos</h1>
+      <button onClick={createTodo}>Add a To Do</button>
       <ul>
         {todos.map((todo) => (
           <li 
@@ -32,7 +32,7 @@ function App() {
         ))}
       </ul>
       <div>
-        🥳 App successfully hosted. Try creating a new todo.
+        🥳 App successfully hosted. Try creating a Don to do.
         <br />
         <a href="https://docs.amplify.aws/react/start/quickstart/#make-frontend-updates">
           Review next step of this tutorial.
