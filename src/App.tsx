@@ -45,9 +45,7 @@ function App() {
       <div>
         🥳 App successfully hosted. Try creating a Don to do.
         <br />
-        <a href="https://docs.amplify.aws/react/start/quickstart/#make-frontend-updates">
-          Review next step of this tutorial.
-        </a>
+        
       </div>
 
           <button onClick={signOut}>Sign out</button>
