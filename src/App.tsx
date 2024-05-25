@@ -7,9 +7,7 @@ const client = generateClient<Schema>();
 function App() {
 
   
-  function deleteTodo(id: string) {
-    client.models.Todo.delete({ id })
-  }  
+ 
   const [todos, setTodos] = useState<Array<Schema["MedMarOne TO Do"]["type"]>>([]);
 
   useEffect(() => {
@@ -21,8 +19,9 @@ function App() {
   function createTodo() {
     client.models.Todo.create({ content: window.prompt("Don's Todo Content") });
   }
-
-  return (
+ function deleteTodo(id: string) {
+    client.models.Todo.delete({ id })
+  }    return (
     <main>
       <h1>My todos</h1>
       <button onClick={createTodo}>+ new</button>
