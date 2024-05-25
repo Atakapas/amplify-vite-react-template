@@ -5,7 +5,12 @@ import { generateClient } from "aws-amplify/data";
 const client = generateClient<Schema>();
 
 function App() {
-  const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
+
+  
+  function deleteTodo(id: string) {
+    client.models.Todo.delete({ id })
+  }  
+  const [todos, setTodos] = useState<Array<Schema["MedMarOne TO Do"]["type"]>>([]);
 
   useEffect(() => {
     client.models.Todo.observeQuery().subscribe({
@@ -14,7 +19,7 @@ function App() {
   }, []);
 
   function createTodo() {
-    client.models.Todo.create({ content: window.prompt("Todo content") });
+    client.models.Todo.create({ content: window.prompt("Don's Todo Content") });
   }
 
   return (
@@ -23,14 +28,16 @@ function App() {
       <button onClick={createTodo}>+ new</button>
       <ul>
         {todos.map((todo) => (
-          <li key={todo.id}>{todo.content}</li>
+          <li 
+            onClick={() => deleteTodo(todo.id)}            
+            key={todo.id}>{todo.content}
+          </li>
         ))}
       </ul>
       <div>
-        🥳 App successfully hosted. Try creating a new todo.
-        <br />
-        <a href="https://docs.amplify.aws/react/start/quickstart/#make-frontend-updates">
-          Review next step of this tutorial.
+        🥳 App successfully hosted. MedMarOne under construction.
+        <br />        <a href="https://youtube.com">
+          Go To YouTube
         </a>
       </div>
     </main>
