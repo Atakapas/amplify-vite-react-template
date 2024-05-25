@@ -16,18 +16,8 @@ function App() {
         </li>)}
       </ul>
       <div>
-        🥳 App successfully hosted. Try creating a new todo.
+        🥳 App successfully hosted. Try creating a Don To Do .
         <br />
-      
-      </div>
-    </main>
-  )
-}
-      <div>
-        🥳 App successfully hosted. Try creating a Don to do.
-        <br />
-        
-      </div>
 
           <button onClick={signOut}>Sign out</button>
       
