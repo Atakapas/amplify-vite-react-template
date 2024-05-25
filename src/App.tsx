@@ -32,11 +32,8 @@ function App() {
         ))}
       </ul>
       <div>
-        🥳 App successfully hosted. Try creating a Don to do.
+        Try creating a Don to do.
         <br />
-        <a href="https://www.youtube.com">
-          Go to YouTube.
-        </a>
       </div>
     </main>
   );
